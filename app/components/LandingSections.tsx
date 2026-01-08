@@ -38,19 +38,14 @@ type Feature = {
 type Trade = { title: string; desc: string; icon: React.ReactNode };
 type CompareCol = { title: string; items: string[]; highlight?: boolean };
 const kitImages = {
-  net: "https://images.unsplash.com/photo-1581091215367-59ab6bfc7a1a?auto=format&fit=crop&w=1400&q=80",
-  strap:
-    "https://images.unsplash.com/photo-1603570419989-8f8ef7c3b3a7?auto=format&fit=crop&w=1400&q=80",
-  qr: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80",
-  bag: "https://images.unsplash.com/photo-1520975958225-02f1c1f3f158?auto=format&fit=crop&w=1400&q=80",
+  net: "/net.png",
+  strap: "/maninstall.png",
+  qr: "/qr.png",
+  bag: "/package.png",
 } as const;
 function KitHoverGallery({ kitActive }: { kitActive: keyof typeof kitImages }) {
   return (
     <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
-      <div className="absolute left-5 top-5 z-10 rounded-full border border-white/30 bg-slate-950/40 px-3 py-1 text-xs font-semibold text-white backdrop-blur">
-        Hover to see more
-      </div>
-
       <img
         key={kitActive} // forces a clean swap
         src={kitImages[kitActive]}
@@ -438,7 +433,7 @@ export function LandingSections() {
 
             <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
               <img
-                src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80"
+                src="/brokenskylight.png"
                 alt="Commercial roof work"
                 className="h-[360px] w-full object-cover"
               />
@@ -573,9 +568,62 @@ export function LandingSections() {
         </div>
       </section>
 
+      {/* ORDER ONLINE CTA */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="mx-auto max-w-3xl rounded-3xl border border-orange-200 bg-gradient-to-br from-orange-50 to-white p-8 shadow-lg">
+            <div className="text-center">
+              <p className="text-sm font-semibold tracking-wide text-orange-600">
+                Ready to protect your crew?
+              </p>
+              <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Order Your Skylight Safety Kit
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600">
+                Purpose-built for 4&lsquo; × 8&lsquo; commercial skylights.
+                Ships ready to deploy with everything included—net, straps, QR
+                labels, and storage bag.
+              </p>
+
+              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Link
+                  href="/details"
+                  className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-4 text-base font-semibold text-white shadow-md transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2"
+                >
+                  <FaArrowRight className="mr-2" size={18} />
+                  Order Now
+                </Link>
+
+                <a
+                  href="#bulk"
+                  className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-8 py-4 text-base font-semibold text-slate-900 transition hover:bg-slate-50"
+                >
+                  View Bulk Pricing
+                </a>
+              </div>
+
+              <div className="mt-8 flex items-center justify-center gap-8 text-sm text-slate-600">
+                <div className="flex items-center gap-2">
+                  <FaCheckCircle className="text-orange-500" size={16} />
+                  <span>Fast Shipping</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaCheckCircle className="text-orange-500" size={16} />
+                  <span>QR Tracking Included</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <FaCheckCircle className="text-orange-500" size={16} />
+                  <span>Volume Discounts</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* KIT / WHAT'S INCLUDED */}
       {/* KIT / WHAT'S INCLUDED (HOVER IMAGE SWAP) */}
-      <section className="bg-white">
+      <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             {/* LEFT: Copy + Hover List */}
@@ -698,7 +746,7 @@ export function LandingSections() {
       </section>
 
       {/* 3-STEP DEPLOYMENT + AFTER YOU SCAN */}
-      <section id="working-plan" className="bg-slate-50">
+      <section id="working-plan" className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <p className="text-center text-sm font-semibold tracking-wide text-orange-600">
             Installation in minutes, protection for the duration
@@ -797,7 +845,7 @@ export function LandingSections() {
       </section>
 
       {/* QR PROOF SECTION */}
-      <section className="bg-white">
+      <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <p className="text-center text-sm font-semibold tracking-wide text-orange-600">
             Documentation you can defend
@@ -912,7 +960,7 @@ export function LandingSections() {
       </section>
 
       {/* WHO WE PROTECT + APPLICATIONS + SCAN TIMELINE */}
-      <section className="bg-slate-50">
+      <section className="bg-white">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <p className="text-center text-sm font-semibold tracking-wide text-orange-600">
             Who we protect
