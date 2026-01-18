@@ -14,7 +14,7 @@ type QRWay = {
 
 export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
   return (
-    <section style={{ backgroundColor: "#fc8337" }}>
+    <section className="relative" style={{ backgroundColor: "#fc8337" }}>
       <div className="mx-auto max-w-6xl px-6 py-16">
         <p className="text-center text-sm font-semibold tracking-wide text-black">
           Documentation you can defend
@@ -119,7 +119,7 @@ export function QRProof({ qrWays }: { qrWays: QRWay[] }) {
 
             <div className="mt-6 flex gap-3">
               <Link
-                href="/details"
+                href="/products-and-services/#qr"
                 className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-black/80"
               >
                 QR Workflow Details <span className="ml-2">→</span>

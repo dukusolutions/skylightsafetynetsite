@@ -5,10 +5,10 @@ import { TrustItem } from "../Shared";
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0">
-        <div className="h-full w-full bg-black" />
-        <div className="absolute inset-0 opacity-40 [background:radial-gradient(80rem_40rem_at_70%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
-        <div className="absolute inset-0 opacity-30 [background:radial-gradient(50rem_30rem_at_20%_10%,rgba(249,115,22,0.30),transparent_60%)]" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="h-full w-full bg-black pointer-events-none" />
+        <div className="absolute inset-0 opacity-40 pointer-events-none [background:radial-gradient(80rem_40rem_at_70%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
+        <div className="absolute inset-0 opacity-30 pointer-events-none [background:radial-gradient(50rem_30rem_at_20%_10%,rgba(249,115,22,0.30),transparent_60%)]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 py-12 lg:py-10">
@@ -27,7 +27,7 @@ export function Hero() {
 
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
-              href="/details"
+              href="/products-and-services"
               className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-black"
             >
               <FaArrowRight className="mr-2" size={18} />

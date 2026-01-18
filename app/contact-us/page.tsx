@@ -1,4 +1,4 @@
-import { DetailsSections } from "../components/DetailsSections";
+import { Contact } from "../components/Contact";
 
 export const metadata = {
   title: "Skylight Safety — Details",
@@ -6,6 +6,6 @@ export const metadata = {
     "Specs, what’s included, QR tracking workflow, and compliance documentation details for Skylight Safety.",
 };
 
-export default function DetailsPage() {
-  return <DetailsSections />;
+export default function ContactPage() {
+  return <Contact />;
 }

@@ -3,7 +3,7 @@ import { Accordion, FAQ } from "../Shared";
 
 export function FAQSection({ faqs }: { faqs: FAQ[] }) {
   return (
-    <section id="faq" style={{ backgroundColor: "#c0652c" }}>
+    <section id="faq" className="relative" style={{ backgroundColor: "#c0652c" }}>
       <div className="mx-auto max-w-6xl px-6 py-16">
         <p className="text-center text-sm font-semibold tracking-wide text-black">
           Common installation questions
@@ -27,7 +27,7 @@ export function FAQSection({ faqs }: { faqs: FAQ[] }) {
               audits.
             </p>
             <Link
-              href="/details"
+              href="/products-and-services"
               className="mt-6 inline-flex items-center justify-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white hover:bg-black/80"
             >
               View Details <span className="ml-2">→</span>

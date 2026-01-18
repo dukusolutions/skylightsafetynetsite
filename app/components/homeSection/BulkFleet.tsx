@@ -4,7 +4,7 @@ import { Stat } from "../Shared";
 
 export function BulkFleet() {
   return (
-    <section id="bulk" className="bg-black">
+    <section id="bulk" className="relative bg-black">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
@@ -47,7 +47,7 @@ export function BulkFleet() {
               </a>
 
               <Link
-                href="/details"
+                href="/products-and-specs.pdf"
                 className="inline-flex items-center justify-center rounded-xl border border-gray-700 bg-black/60 px-6 py-3 text-sm font-semibold text-white transition hover:bg-black/80"
               >
                 View Spec Sheet <span className="ml-2">→</span>

@@ -1,19 +1,19 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import { Hero } from "./section/Hero";
-import { WhoItsFor } from "./section/WhoItsFor";
-import { RiskFraming } from "./section/RiskFraming";
-import { CoreBenefits } from "./section/CoreBenefits";
-import { Comparison } from "./section/Comparison";
-import { OrderOnline } from "./section/OrderOnline";
-import { KitIncluded } from "./section/KitIncluded";
-import { DeploymentSteps } from "./section/DeploymentSteps";
-import { QRProof } from "./section/QRProof";
-import { Applications } from "./section/Applications";
-import { BulkFleet } from "./section/BulkFleet";
-import { FAQSection } from "./section/FAQSection";
-import { RequestForm } from "./section/RequestForm";
+import { Hero } from "./homeSection/Hero";
+import { WhoItsFor } from "./homeSection/WhoItsFor";
+import { RiskFraming } from "./homeSection/RiskFraming";
+import { CoreBenefits } from "./homeSection/CoreBenefits";
+import { Comparison } from "./homeSection/Comparison";
+import { OrderOnline } from "./homeSection/OrderOnline";
+import { KitIncluded } from "./homeSection/KitIncluded";
+import { DeploymentSteps } from "./homeSection/DeploymentSteps";
+import { QRProof } from "./homeSection/QRProof";
+import { Applications } from "./homeSection/Applications";
+import { BulkFleet } from "./homeSection/BulkFleet";
+import { FAQSection } from "./homeSection/FAQSection";
+import { RequestForm } from "./homeSection/RequestForm";
 import { FAQ } from "./Shared";
 import { FaTools, FaQrcode, FaRedoAlt, FaCheckCircle } from "react-icons/fa";
 
@@ -30,7 +30,7 @@ type Application = {
   title: string;
   items: string[];
 };
-export function LandingSections() {
+export function Home() {
   const [kitActive, setKitActive] = useState<"net" | "strap" | "qr" | "bag">(
     "net"
   );

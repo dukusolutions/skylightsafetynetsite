@@ -3,9 +3,9 @@ import { FaArrowRight, FaCheckCircle, FaQrcode, FaBolt, FaShieldAlt } from "reac
 
 export function OrderOnline() {
   return (
-    <section style={{ backgroundColor: "#c0652c" }}>
+    <section className="relative" style={{ backgroundColor: "#c0652c" }}>
       {/* Decorative elements */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-white/30 blur-3xl" />
         <div className="absolute -right-20 bottom-10 h-96 w-96 rounded-full bg-black/20 blur-3xl" />
       </div>
@@ -52,7 +52,7 @@ export function OrderOnline() {
 
               <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link
-                  href="/details"
+                  href="/products-and-services"
                   className="group inline-flex items-center justify-center rounded-xl bg-orange-500 px-8 py-3.5 text-base font-bold text-white shadow-2xl shadow-black/50 transition hover:scale-105 hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-400"
                 >
                   <FaArrowRight

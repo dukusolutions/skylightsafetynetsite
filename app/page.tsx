@@ -1,5 +1,5 @@
 // app/page.tsx
-import { LandingSections } from "./components/LandingSections";
+import { Home } from "./components/Home";
 
 export const metadata = {
   title: "Skylight Safety — Skylight Safety Net System",
@@ -8,5 +8,5 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  return <LandingSections />;
+  return <Home />;
 }
